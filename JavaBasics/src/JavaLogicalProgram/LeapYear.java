@@ -10,11 +10,40 @@ public class LeapYear {
 		//1900 is not a leap year
 		//2012 is leap year
 		
-		int year = 1900;
+		int year = 2016;
 		boolean leap = false;
+		if(year%4 ==0)
+		{
+			if(year%100 ==0)
+			{
+				if(year%400 ==0) 
+				{
+					leap = true;
+					
+				}
+				else 
+				{
+					leap =false;
+				}
+			}
+			else
+			{
+				leap =true;
+			}
+		}
+		else
+		{
+			leap = false;
+			
+		}
+		if(leap)
+		{
+			System.out.println(year +" is leap year");
+		}
+		else {
+			System.out.println(year +" is not a leap year");
+		}
 		
-		
-
 	}
 
 }
